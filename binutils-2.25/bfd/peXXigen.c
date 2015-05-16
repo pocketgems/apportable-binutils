@@ -3522,7 +3522,7 @@ u16_mbtouc (wchar_t * puc, const unsigned short * s, unsigned int n)
 }
 #endif /* HAVE_WCHAR_H and not Cygwin/Mingw */
 
-#ifdef __APPLE__
+#if defined(__APPLE__) && (defined(__ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__) && __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ < MAC_OS_X_VERSION_10_10)
 /* wcsncasecmp isn't always defined in Mac SDK */
 static int
 wcsncasecmp(const wchar_t *s1, const wchar_t *s2, size_t n)
