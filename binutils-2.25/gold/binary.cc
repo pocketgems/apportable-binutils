@@ -24,10 +24,10 @@
 
 #include <cerrno>
 #include <cstring>
-#include "safe-ctype.h"
 
 #include "elfcpp.h"
 #include "stringpool.h"
+#include "safe-ctype.h"
 #include "fileread.h"
 #include "output.h"
 #include "binary.h"
